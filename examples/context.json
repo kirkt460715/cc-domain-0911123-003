@@ -1,0 +1,887 @@
+{
+  "synthetic": true,
+  "records": [
+    {
+      "transaction": "t0",
+      "item": null,
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t0",
+      "item": null,
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t1",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t1",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t2",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t2",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t3",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t3",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t4",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t4",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t4",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t5",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t5",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t6",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t6",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t7",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t7",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t7",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t8",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t8",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t8",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t9",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t9",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t10",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t10",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t11",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t11",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t12",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t12",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t12",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t13",
+      "item": null,
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t14",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t14",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t14",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t15",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t15",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t16",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t16",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t16",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t17",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t17",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t18",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t18",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t19",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t19",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t20",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t20",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t21",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t21",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t21",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t22",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t23",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t24",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t24",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t24",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t25",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t26",
+      "item": null,
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t27",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t27",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t28",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t28",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t28",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t29",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t30",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t30",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t31",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t32",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t32",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t33",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t33",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t34",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t35",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t35",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t36",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t36",
+      "item": "seal",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t36",
+      "item": "bolt",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t37",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t38",
+      "item": "filter",
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t39",
+      "item": null,
+      "date": "2026-09-15",
+      "returned": false
+    },
+    {
+      "transaction": "t40",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t40",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t41",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t42",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t42",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t42",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t43",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t44",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t44",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t45",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t45",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t46",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t47",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t48",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t48",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t48",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t49",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t49",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t50",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t51",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t51",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t52",
+      "item": null,
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t53",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t54",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t54",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t55",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t56",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t56",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t56",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t57",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t57",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t58",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t59",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t60",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t60",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t60",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t61",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t62",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t63",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t63",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t63",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t64",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t64",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t65",
+      "item": null,
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t66",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t66",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t67",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t68",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t68",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t69",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t69",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t70",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t70",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t71",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t72",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t72",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t72",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t73",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t74",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t75",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t75",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t76",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t76",
+      "item": "bolt",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t77",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t77",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t78",
+      "item": null,
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "t79",
+      "item": "filter",
+      "date": "2026-10-15",
+      "returned": false
+    },
+    {
+      "transaction": "return-only",
+      "item": "seal",
+      "date": "2026-10-15",
+      "returned": true
+    }
+  ]
+}
