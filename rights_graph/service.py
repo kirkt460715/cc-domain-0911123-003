@@ -8,6 +8,7 @@ from rights_graph.planner import plans, builds, artifacts, inspection, invalidat
 from rights_graph.planner.preview import PreviewEngine
 from rights_graph.planner.campaigns import Campaigns
 from rights_graph.planner.delivery import DeliveryDesk
+from rights_graph.analysis.reports import AnalysisDesk
 
 
 class RightsService:
@@ -17,6 +18,7 @@ class RightsService:
         self.proposals = ProposalDesk(self.store)
         self.campaigns = Campaigns(self.store)
         self.deliveries = DeliveryDesk(self.store)
+        self.analysis = AnalysisDesk(self.store, self.preview.data)
 
     def __enter__(self):
         return self
@@ -244,6 +246,17 @@ class RightsService:
         if operation == 'delivery.acknowledge_alert':
             fields(data, {'alert_id', 'recipient'})
             return self.deliveries.acknowledge_alert(**data)
+        if operation == 'analysis.run':
+            return self.analysis.run(data)
+        if operation == 'analysis.get':
+            fields(data, {'report_id'})
+            return self.analysis.get(**data)
+        if operation == 'analysis.list':
+            fields(data, set())
+            return self.analysis.listing()
+        if operation == 'analysis.deliver':
+            fields(data, {'delivery_id', 'report_id', 'recipient'})
+            return self.analysis.deliver(**data)
         if operation == 'audit.page':
             fields(data, set(), {'after', 'limit'})
             return audit.page(self.store, **data)

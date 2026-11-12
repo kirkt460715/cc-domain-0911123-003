@@ -1,0 +1,116 @@
+{
+  "synthetic": true,
+  "asset": {
+    "asset_id": "supplies",
+    "kind": "source",
+    "owner": "station-network",
+    "columns": [
+      {"name": "transaction", "type": "string", "classification": "internal", "nullable": true},
+      {"name": "item", "type": "string", "classification": "internal", "nullable": true},
+      {"name": "date", "type": "string", "classification": "internal", "nullable": false},
+      {"name": "returned", "type": "boolean", "classification": "internal", "nullable": false}
+    ],
+    "description": "授权维修站耗材领用明细（合成数据）"
+  },
+  "grant": {
+    "grant_id": "grant-supplies",
+    "asset_id": "supplies",
+    "policy": {
+      "purposes": ["stocking"],
+      "regions": ["cn"],
+      "rights": ["read", "transform", "distribute"],
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": "2027-01-01T00:00:00Z",
+      "obligations": ["attribution"],
+      "columns": ["transaction", "item", "date", "returned"],
+      "max_depth": 10,
+      "allow_derivatives": true
+    }
+  },
+  "context": {
+    "purpose": "stocking",
+    "region": "cn",
+    "right": "read",
+    "at": "2026-11-11T00:00:00Z",
+    "fulfilled_obligations": ["attribution"]
+  },
+  "batch_id": "autumn-consumables",
+  "records": [
+    {"transaction": "d0", "item": "filter", "date": "2026-09-02", "returned": false},
+    {"transaction": "d0", "item": "seal", "date": "2026-09-02", "returned": false},
+    {"transaction": "d0", "item": "filter", "date": "2026-09-02", "returned": false},
+
+    {"transaction": "d1", "item": "filter", "date": "2026-09-05", "returned": false},
+    {"transaction": "d1", "item": "seal", "date": "2026-09-05", "returned": false},
+
+    {"transaction": "d2", "item": "filter", "date": "2026-09-08", "returned": false},
+    {"transaction": "d2", "item": "seal", "date": "2026-09-08", "returned": false},
+
+    {"transaction": "d3", "item": "filter", "date": "2026-09-11", "returned": false},
+    {"transaction": "d3", "item": "seal", "date": "2026-09-11", "returned": false},
+
+    {"transaction": "d4", "item": "filter", "date": "2026-09-14", "returned": false},
+    {"transaction": "d4", "item": "seal", "date": "2026-09-14", "returned": false},
+
+    {"transaction": "d5", "item": "filter", "date": "2026-09-17", "returned": false},
+
+    {"transaction": "d6", "item": "gasket", "date": "2026-09-19", "returned": false},
+    {"transaction": "d6", "item": "valve", "date": "2026-09-19", "returned": false},
+
+    {"transaction": "d7", "item": "gasket", "date": "2026-09-22", "returned": false},
+    {"transaction": "d7", "item": "valve", "date": "2026-09-22", "returned": false},
+
+    {"transaction": "d8", "item": "gasket", "date": "2026-09-25", "returned": false},
+    {"transaction": "d8", "item": "valve", "date": "2026-09-25", "returned": false},
+
+    {"transaction": "d9", "item": null, "date": "2026-09-27", "returned": false},
+    {"transaction": "d10", "item": null, "date": "2026-09-28", "returned": false},
+
+    {"transaction": "d11", "item": "filter", "date": "2026-09-29", "returned": false},
+    {"transaction": "d11", "item": "seal", "date": "2026-09-29", "returned": true},
+    {"transaction": "d11", "item": "bolt", "date": "2026-09-29", "returned": false},
+
+    {"transaction": "", "item": "filter", "date": "2026-09-30", "returned": false},
+    {"transaction": null, "item": "seal", "date": "2026-09-30", "returned": false},
+
+    {"transaction": "v0", "item": "filter", "date": "2026-10-03", "returned": false},
+    {"transaction": "v0", "item": "seal", "date": "2026-10-03", "returned": false},
+
+    {"transaction": "v1", "item": "filter", "date": "2026-10-06", "returned": false},
+    {"transaction": "v1", "item": "seal", "date": "2026-10-06", "returned": false},
+    {"transaction": "v1", "item": "filter", "date": "2026-10-06", "returned": false},
+
+    {"transaction": "v2", "item": "filter", "date": "2026-10-09", "returned": false},
+    {"transaction": "v2", "item": "seal", "date": "2026-10-09", "returned": false},
+
+    {"transaction": "v3", "item": "filter", "date": "2026-10-12", "returned": false},
+
+    {"transaction": "v4", "item": "filter", "date": "2026-10-15", "returned": false},
+
+    {"transaction": "v5", "item": "valve", "date": "2026-10-17", "returned": false},
+
+    {"transaction": "v6", "item": "gasket", "date": "2026-10-20", "returned": false},
+
+    {"transaction": "v7", "item": "bolt", "date": "2026-10-22", "returned": false},
+    {"transaction": "v7", "item": "bolt", "date": "2026-10-22", "returned": false},
+
+    {"transaction": "v8", "item": null, "date": "2026-10-25", "returned": false},
+
+    {"transaction": "v9", "item": "seal", "date": "2026-10-28", "returned": true},
+    {"transaction": "v9b", "item": "gasket", "date": "2026-10-29", "returned": true},
+
+    {"transaction": "v10", "item": "filter", "date": "2026-10-30", "returned": false}
+  ],
+  "analysis": {
+    "analysis_id": "stocking-rules-autumn",
+    "field_map": {"transaction": "transaction", "item": "item", "date": "date", "returned": "returned"},
+    "discovery_window": ["2026-09-01", "2026-09-30"],
+    "validation_window": ["2026-10-01", "2026-10-31"],
+    "min_support": 0.2,
+    "max_rule_length": 2,
+    "min_cooccurrence": 3
+  },
+  "delivery_id": "stocking-delivery-1",
+  "recipient": "buyer-cn",
+  "revoke_grant": "grant-supplies"
+}

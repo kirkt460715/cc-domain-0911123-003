@@ -17,6 +17,7 @@ def overview(store):
         'plans': store.scalar('SELECT COUNT(*) FROM plans'),
         'artifacts': {row['status']: row['count'] for row in statuses},
         'builds': {row['state']: row['count'] for row in build_states},
+        'analysis_reports': store.scalar("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='analysis_reports'") and store.scalar('SELECT COUNT(*) FROM analysis_reports'),
     }
 
 
@@ -67,6 +68,12 @@ def check(store):
             actual = sorted((item['source_asset'], item['source_version'], item['grant_id'], item['grant_revision']) for item in store.all('SELECT * FROM artifact_inputs WHERE artifact_id=?', (row['artifact_id'],)))
             if expected != actual:
                 problems.append({'code': 'artifact_input_index', 'artifact_id': row['artifact_id']})
+        if store.scalar("SELECT 1 FROM sqlite_master WHERE type='table' AND name='analysis_reports'"):
+            for row in store.all('SELECT * FROM analysis_reports ORDER BY report_id'):
+                if checksum(json.loads(row['payload'])) != row['digest']:
+                    problems.append({'code': 'analysis_report_digest', 'report_id': row['report_id']})
+                if not store.one('SELECT 1 FROM artifacts WHERE artifact_id=?', (row['artifact_id'],)):
+                    problems.append({'code': 'analysis_report_artifact', 'report_id': row['report_id']})
         return {'ok': not problems, 'problems': problems, 'database': database, 'audit': journal, 'graph': graph}
 
 

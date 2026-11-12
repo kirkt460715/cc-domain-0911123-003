@@ -79,6 +79,8 @@ def parser():
     sub.add_parser('recovery-queue')
     demo = sub.add_parser('demo')
     demo.add_argument('--fixture', required=True)
+    association = sub.add_parser('association-demo')
+    association.add_argument('--fixture', required=True)
     return root
 
 
@@ -144,6 +146,69 @@ def demonstrate(service, fixture):
     return {'synthetic': True, 'target': fixture['target'], 'rows': preview['payload']['rows'], 'row_lineage': preview['payload']['row_lineage'], 'manifest_sha256': exported['authorization']['sha256'], 'uncommitted_artifacts': len(visible_before), 'revocation_blocked_export': not invalidated['valid'], 'integrity': check['ok']}
 
 
+def demonstrate_association(service, fixture):
+    from rights_graph.catalog import assets
+    from rights_graph.policy import grants
+    from rights_graph.planner import plans, inspection
+    fields(fixture, {'asset', 'grant', 'context', 'batch_id', 'records', 'analysis', 'delivery_id', 'recipient', 'revoke_grant'}, {'synthetic'})
+    assets.create(service.store, **fixture['asset'])
+    grants.create(service.store, **fixture['grant'])
+    service.preview.data.import_rows(fixture['batch_id'], fixture['asset']['asset_id'], 1, fixture['records'])
+    plan = plans.create(service.store, fixture['asset']['asset_id'], fixture['context'])
+    request = {**fixture['analysis'], 'plan_id': plan['plan_id'], 'binding': fixture['batch_id']}
+    report = service.analysis.run(request)
+    payload = report['payload']
+    # Re-running the identical frozen specification returns the same deliverable.
+    repeated = service.analysis.run(request)
+    if repeated['sha256'] != report['sha256']:
+        reject('demo_determinism', 'Association analysis is not reproducible')
+    delivery = service.analysis.deliver(fixture['delivery_id'], fixture['analysis']['analysis_id'], fixture['recipient'])
+    spurious = next(rule for rule in payload['rules'] if rule['validation']['table']['both'] == 0)
+    stable = next(rule for rule in payload['rules'] if rule['validation']['table']['both'] > 0)
+    grant = grants.get(service.store, fixture['revoke_grant'])
+    grants.revoke(service.store, grant['grant_id'], grant['revision'], 'Synthetic source withdrawal')
+    try:
+        service.analysis.get(fixture['analysis']['analysis_id'])
+    except Exception as exc:
+        revoked_error = getattr(exc, 'code', None)
+    else:
+        reject('demo_revocation', 'Revoked grant failed to block report retrieval')
+    check = inspection.check(service.store)
+    if not check['ok']:
+        reject('demo_integrity', 'Demonstration database failed integrity checks', check=check)
+    return {
+        'synthetic': True,
+        'report_id': payload['report_id'],
+        'plan_id': payload['plan_id'],
+        'artifact_id': payload['artifact_id'],
+        'discovery_window': payload['windows']['discovery'],
+        'validation_window': payload['windows']['validation'],
+        'discovery_population': payload['discovery'],
+        'validation_population': payload['validation'],
+        'candidate_count': payload['candidate_count'],
+        'rules': payload['rules'],
+        'repeated_digest_matches': repeated['sha256'] == report['sha256'],
+        'delivery_envelope': delivery['payload']['format'],
+        'delivery_contains_detail_rows': 'rows' in delivery['payload']['aggregate_payload'],
+        'spurious_rule': {
+            'rule_key': spurious['rule_key'],
+            'discovery_lift': spurious['discovery']['lift'],
+            'discovery_confidence': spurious['discovery']['confidence'],
+            'validation_both': spurious['validation']['table']['both'],
+            'validation_fisher_p': spurious['validation']['fisher_p'],
+            'validation_bh_adjusted_p': spurious['validation']['bh_adjusted_p'],
+        },
+        'persistent_rule': {
+            'rule_key': stable['rule_key'],
+            'validation_both': stable['validation']['table']['both'],
+            'validation_fisher_p': stable['validation']['fisher_p'],
+            'validation_bh_adjusted_p': stable['validation']['bh_adjusted_p'],
+        },
+        'retrieval_after_revocation': revoked_error,
+        'integrity': check['ok'],
+    }
+
+
 def run(args, service):
     command = args.command
     if command == 'call':
@@ -181,6 +246,8 @@ def run(args, service):
         return recovery.queue(service.store)
     if command == 'demo':
         return demonstrate(service, read_json(args.fixture))
+    if command == 'association-demo':
+        return demonstrate_association(service, read_json(args.fixture))
     reject('unknown_command', 'Unsupported command')
 
 
